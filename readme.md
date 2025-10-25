@@ -1,45 +1,53 @@
 # Gradient Descent Visualization in Python
 
-This repository contains Python scripts demonstrating **gradient descent** on both 1D and 2D functions using `NumPy` and `Matplotlib`. It is intended as a learning exercise for understanding the basics of optimization in **machine learning**.
+This repository contains Python scripts demonstrating **gradient descent** on both 2D and 3D functions using `NumPy` and `Matplotlib`.  
+It is intended as a learning exercise for understanding the basics of optimization in **machine learning**.
 
 ---
 
 ## Files
 
-1. **`gradient_descent_1d.py`**  
-   - Demonstrates gradient descent on a 1D function: `y = sin(x)`.
-   - Visualizes the iterative steps of the algorithm as a red point moving along the curve toward a local minimum.
+1. **`gradient_descent_2d.py`**  
+   - Demonstrates gradient descent on a 2D function: `y = sin(x)`.  
+   - Visualizes the iterative steps of the algorithm as a red point moving along the curve toward a local minimum.  
    - **Example Output:**
 
-![1D Gradient Descent](./images/gradient_descent_2d.png)
+     ![2D Gradient Descent](./images/gradient_descent_2d.png)
 
-2. **`gradient_descent_2d.py`**  
-   - Demonstrates gradient descent on a 2D function: `z = sin(5x) * cos(5y) / 5`.
-   - Visualizes the iterative steps of the algorithm on a 3D surface with a magenta point moving toward a local minimum.
+2. **`gradient_descent_3d.py`**  
+   - Demonstrates gradient descent on a 3D surface: `z = sin(5x) * cos(5y) / 5`.  
+   - Visualizes the iterative steps of the algorithm with a magenta point moving toward a local minimum on the surface.  
    - **Example Output:**
 
-![2D Gradient Descent](./images/gradient_descent_3d.png)
+     ![3D Gradient Descent](./images/gradient_descent_3d.png)
 
 ---
 
 ## How it Works
 
-- **Gradient Descent** is an optimization algorithm used to find the minimum of a function.
-- The basic idea:
-  1. Start at an initial point `(x0, y0)`.
-  2. Compute the gradient (derivative) at that point.
-  3. Move in the opposite direction of the gradient scaled by a learning rate.
-  4. Repeat until convergence.
+**Gradient Descent** is an optimization algorithm used to find the minimum of a function.  
+It’s one of the foundational ideas in machine learning used for training models.
 
-### 1D Function
+### Algorithm Steps
+
+1. Start at an initial point `(x₀, y₀)`.
+2. Compute the gradient (derivative) at that point.
+3. Move in the opposite direction of the gradient scaled by a learning rate.
+4. Repeat until convergence or until a stopping condition is met.
+
+---
+
+## Functions Used
+
+### 2D Function
 
 ```python
 y = sin(x)
 Derivative: dy/dx = cos(x)
 
-The red point shows the current position and moves along the curve toward a minimum.
+The red point shows the current position and moves along the sine curve toward a minimum.
 
-2D Function
+3D Function
 python
 Copy code
 z = sin(5*x) * cos(5*y) / 5
@@ -58,32 +66,28 @@ NumPy
 
 Matplotlib
 
-Install dependencies using pip:
+Install dependencies using:
 
 bash
 Copy code
 pip install numpy matplotlib
 Usage
-Run the scripts to see the gradient descent in action:
+Run the scripts to see gradient descent in action:
 
 bash
 Copy code
-python gradient_descent_1d.py
 python gradient_descent_2d.py
-Watch as the point moves iteratively toward the function's minimum.
+python gradient_descent_3d.py
+Watch as the point iteratively moves toward the function’s minimum.
 
 Learning Goals
 By studying and running this project, you will:
 
 Understand the concept of gradient descent.
 
-Learn how to calculate derivatives and gradients.
+Learn how to compute derivatives and gradients.
 
-Visualize optimization in 1D and 2D spaces.
+Visualize optimization in 2D and 3D spaces.
 
 Build a foundation for more advanced machine learning optimization techniques.
-
-
-
-
 
